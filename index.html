@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+  <body>
+        <div class="container">
+                <br><br><br><br>
+                
+                <button type="button" class="btn btn-dark" onclick="ummm(1)">1</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(2)">2</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(3)">3</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(4)">4</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(5)">5</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(6)">6</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(7)">7</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(8)">8</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(9)">9</button>
+                <button type="button" class="btn btn-dark" onclick="ummm(0)">0</button>
+                <br><br>
+                <button type="button" class="btn btn-dark" onclick="me('+')">+</button>
+                <button type="button" class="btn btn-dark" onclick="me('-')">-</button>
+                <button type="button" class="btn btn-dark" onclick="me('*')">×</button>
+                <button type="button" class="btn btn-dark" onclick="me('/')">÷</button>
+                <button type="button" class="btn btn-dark" onclick="me('(')">(</button>
+                <button type="button" class="btn btn-dark" onclick="me(')')">)</button>
+                <button type="button" class="btn btn-dark" onclick="dd()">消</button>
+                <br><br>
+                <button type="button" class="btn btn-dark" style="width:100%;" onclick="iko()">=</button>
+                <br><br>
+                <input class="form-control" id="as" type="text" readonly value="">
+                <br>
+                <input class="form-control" id="a3" type="text" readonly value="">
+        </div>
+        <script>
+            function ummm(nas){
+                document.getElementById( "as" ).value += nas ;
+            }
+            function me(wd){
+                document.getElementById( "as" ).value += wd ;
+            }
+            function dd(){
+                document.getElementById( "as" ).value = document.getElementById( "as" ).value.slice( 0, -1 ) ;
+            }
+            function iko(){
+                document.getElementById( "a3" ).value=eval(document.getElementById( "as" ).value);
+            }
+        </script>
+  </body>
+</html>
